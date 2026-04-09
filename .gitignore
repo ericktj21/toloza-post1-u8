@@ -1,0 +1,18 @@
+# Maven
+target/
+*.war
+*.jar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build
+.DS_Store
+*.log
+
+# H2 Database
+*.h2.db
