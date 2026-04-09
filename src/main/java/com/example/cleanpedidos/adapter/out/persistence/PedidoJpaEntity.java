@@ -18,8 +18,8 @@ public class PedidoJpaEntity {
     @Enumerated(EnumType.STRING)
     private EstadoPedidoJpa estado;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "pedido_id")
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "pedido_lineas", joinColumns = @JoinColumn(name = "pedido_id"))
     private List<LineaPedidoJpaEntity> lineas;
 
     public PedidoJpaEntity() {}
